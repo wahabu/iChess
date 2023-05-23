@@ -24,13 +24,14 @@
 
 // export default App;
 import './App.css';
+import Chessboard from './components/Chessboard';
 
 function App() {
   return (
     <div>
-      Chess board!
+      <Chessboard/>
     </div>
   )
 }
 
-export default App;
+export default App; 
