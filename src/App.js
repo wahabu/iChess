@@ -28,7 +28,7 @@ import Chessboard from './components/Chessboard';
 
 function App() {
   return (
-    <div>
+    <div id="app">
       <Chessboard/>
     </div>
   )
