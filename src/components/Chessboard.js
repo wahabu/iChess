@@ -14,12 +14,17 @@ export default function Chessboard() {
       
       if(number % 2 === 0) {
           board.push(
-            <div className="tile black-tile">[{horizontalAxis[i]} {verticalAxis[j]}]</div>
-          )
-      } else {
-          board.push(
-            <div className="tile white-tile">[{horizontalAxis[i]} {verticalAxis[j]}]</div>
-          );
+      //       <div className="tile black-tile">[{horizontalAxis[i]} {verticalAxis[j]}]</div>
+      //     )
+      // } else {
+      //     board.push(
+      //       <div className="tile white-tile">[{horizontalAxis[i]} {verticalAxis[j]}]</div>
+                <div className="tile black-tile"></div>
+            )
+          } else {
+              board.push(
+                <div className="tile white-tile"></div>
+            );
           }
     }
   }
