@@ -1,5 +1,12 @@
 #chessboard {
-  width: 801px;
-  height: 801px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 800px;
   background-color: #779556;
+}
+
+#chessboard .tile {
+  width: 100px;
+  height: 100px;
 }
