@@ -24,7 +24,7 @@
 
 // export default App;
 import './App.css';
-import Chessboard from './components/Chessboard';
+import Chessboard from './components/Chessboard/Chessboard';
 
 function App() {
   return (
