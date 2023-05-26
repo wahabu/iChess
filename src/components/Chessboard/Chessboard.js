@@ -11,7 +11,7 @@ for (let i =0; i < 8; i++) {
     image: "assets/images/bp.png",
     x: i,
     y: 6
-});
+  });
 }
 
 for (let i =0; i < 8; i++) {
@@ -20,9 +20,11 @@ for (let i =0; i < 8; i++) {
     x: i,
     y: 1
   });
-  }
+}
 
-//pieces.push({image: "assets/images/bp.png"})
+pieces.push({image: "assets/images/br.png", x: 0, y: 7})
+pieces.push({image: "assets/images/br.png", x: 7, y: 7})
+
 
 function Chessboard() {
   let board = [];
