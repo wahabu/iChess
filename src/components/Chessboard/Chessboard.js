@@ -24,7 +24,8 @@ for (let i =0; i < 8; i++) {
 
 pieces.push({image: "assets/images/br.png", x: 0, y: 7})
 pieces.push({image: "assets/images/br.png", x: 7, y: 7})
-
+pieces.push({image: "assets/images/bn.png", x: 6, y: 7})
+pieces.push({image: "assets/images/bn.png", x: 1, y: 7})
 
 function Chessboard() {
   let board = [];
