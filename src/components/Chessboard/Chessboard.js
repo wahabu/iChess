@@ -28,8 +28,8 @@ pieces.push({image: "assets/images/bn.png", x: 6, y: 7})
 pieces.push({image: "assets/images/bn.png", x: 1, y: 7})
 pieces.push({image: "assets/images/bb.png", x: 2, y: 7})
 pieces.push({image: "assets/images/bb.png", x: 5, y: 7})
-pieces.push({image: "assets/images/bq.png", x: 4, y: 7})
-pieces.push({image: "assets/images/bk.png", x: 3, y: 7})
+pieces.push({image: "assets/images/bq.png", x: 3, y: 7})
+pieces.push({image: "assets/images/bk.png", x: 4, y: 7})
 
 pieces.push({image: "assets/images/wr.png", x: 0, y: 0})
 pieces.push({image: "assets/images/wr.png", x: 7, y: 0})
@@ -37,8 +37,8 @@ pieces.push({image: "assets/images/wn.png", x: 6, y: 0})
 pieces.push({image: "assets/images/wn.png", x: 1, y: 0})
 pieces.push({image: "assets/images/wb.png", x: 2, y: 0})
 pieces.push({image: "assets/images/wb.png", x: 5, y: 0})
-pieces.push({image: "assets/images/wq.png", x: 4, y: 0})
-pieces.push({image: "assets/images/wk.png", x: 3, y: 0})
+pieces.push({image: "assets/images/wq.png", x: 3, y: 0})
+pieces.push({image: "assets/images/wk.png", x: 4, y: 0})
 
 function Chessboard() {
   let board = [];
