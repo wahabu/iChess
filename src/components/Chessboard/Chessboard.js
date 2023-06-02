@@ -6,6 +6,21 @@ const verticalAxis = ["1", "2", "3", "4", "5", "6", "7", "8"];
 const horizontalAxis = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 const pieces = [];
+
+for(let p =0; p < 2; p++) {
+  const type = (p === 0) ? "b" : "w";
+  const y = (p === 0) ? 7 : 0;
+
+  pieces.push({image: `assets/images/${type}r.png`, x: 0, y});
+  pieces.push({image: `assets/images/${type}r.png`, x: 7, y});
+  pieces.push({image: `assets/images/${type}n.png`, x: 6, y});
+  pieces.push({image: `assets/images/${type}n.png`, x: 1, y});
+  pieces.push({image: `assets/images/${type}b.png`, x: 2, y});
+  pieces.push({image: `assets/images/${type}b.png`, x: 5, y});
+  pieces.push({image: `assets/images/${type}q.png`, x: 3, y});
+  pieces.push({image: `assets/images/${type}k.png`, x: 4, y});
+}
+
 for (let i =0; i < 8; i++) {
   pieces.push({
     image: "assets/images/bp.png",
@@ -21,24 +36,6 @@ for (let i =0; i < 8; i++) {
     y: 1
   });
 }
-
-pieces.push({image: "assets/images/br.png", x: 0, y: 7})
-pieces.push({image: "assets/images/br.png", x: 7, y: 7})
-pieces.push({image: "assets/images/bn.png", x: 6, y: 7})
-pieces.push({image: "assets/images/bn.png", x: 1, y: 7})
-pieces.push({image: "assets/images/bb.png", x: 2, y: 7})
-pieces.push({image: "assets/images/bb.png", x: 5, y: 7})
-pieces.push({image: "assets/images/bq.png", x: 3, y: 7})
-pieces.push({image: "assets/images/bk.png", x: 4, y: 7})
-
-pieces.push({image: "assets/images/wr.png", x: 0, y: 0})
-pieces.push({image: "assets/images/wr.png", x: 7, y: 0})
-pieces.push({image: "assets/images/wn.png", x: 6, y: 0})
-pieces.push({image: "assets/images/wn.png", x: 1, y: 0})
-pieces.push({image: "assets/images/wb.png", x: 2, y: 0})
-pieces.push({image: "assets/images/wb.png", x: 5, y: 0})
-pieces.push({image: "assets/images/wq.png", x: 3, y: 0})
-pieces.push({image: "assets/images/wk.png", x: 4, y: 0})
 
 function Chessboard() {
   let board = [];
