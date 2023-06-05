@@ -37,6 +37,34 @@ for (let i =0; i < 8; i++) {
   });
 }
 
+let activePiece;
+
+function grabPiece(e) {
+  const element = e.target;
+  if(element.classList.contains("chess-piece")) {
+    console.log(e);
+
+    const x = e.clientX - 50;
+    const y = e.clientY - 50;
+    element.style.position = "absolute";
+    element.style.left = `${x}px`;
+    element.style.top = `${y}px`;
+
+    activePiece = element;
+  }
+}
+
+function movePiece(e) {
+  const element = e.target;
+  if (element.classList.contains("chess-piece")) {
+    const x = e.clientX - 50;
+    const y = e.clientY - 50;
+    element.style.position = "absolute";
+    element.style.left = `${x}px`;
+    element.style.top = `${y}px`;
+  }
+
+}
 function Chessboard() {
   let board = [];
 
@@ -55,7 +83,7 @@ function Chessboard() {
     }
   }
 
-  return <div id="chessboard">{board}</div>;
+  return <div onMouseMove={(e) => movePiece(e)} onMouseDown={e => grabPiece(e)} id="chessboard">{board}</div>;
 }
 
 Chessboard.propTypes = {
