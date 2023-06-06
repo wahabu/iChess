@@ -56,7 +56,7 @@ function grabPiece(e) {
 
 function movePiece(e) {
   const element = e.target;
-  if (element.classList.contains("chess-piece")) {
+  if (activePiece && activePiece.classList.contains("chess-piece")) {
     const x = e.clientX - 50;
     const y = e.clientY - 50;
     element.style.position = "absolute";
