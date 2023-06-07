@@ -56,12 +56,12 @@ function grabPiece(e) {
 
 function movePiece(e) {
   const element = e.target;
-  if (activePiece && activePiece.classList.contains("chess-piece")) {
+  if (activePiece) {
     const x = e.clientX - 50;
     const y = e.clientY - 50;
-    element.style.position = "absolute";
-    element.style.left = `${x}px`;
-    element.style.top = `${y}px`;
+    activePiece.style.position = "absolute";
+    activePiece.style.left = `${x}px`;
+    activePiece.style.top = `${y}px`;
   }
 
 }
@@ -83,7 +83,15 @@ function Chessboard() {
     }
   }
 
-  return <div onMouseMove={(e) => movePiece(e)} onMouseDown={e => grabPiece(e)} id="chessboard">{board}</div>;
+  return (
+  <div 
+    onMouseMove={(e) => movePiece(e)}
+    onMouseDown={(e) => grabPiece(e)}
+    onMouseUp={(e) => dropPiece(e)}
+    id="chessboard">
+    {board}
+  </div>
+  );
 }
 
 Chessboard.propTypes = {
