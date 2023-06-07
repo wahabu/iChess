@@ -63,7 +63,12 @@ function movePiece(e) {
     activePiece.style.left = `${x}px`;
     activePiece.style.top = `${y}px`;
   }
+}
 
+function dropPiece(e) {
+  if(activePiece) {
+    activePiece = null;
+  }
 }
 function Chessboard() {
   let board = [];
