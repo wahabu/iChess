@@ -36,8 +36,10 @@ for (let i =0; i < 8; i++) {
     y: 1
   });
 }
+function Chessboard() {
+  const chessboardRef = null;
 
-let activePiece;
+  let activePiece : null;
 
 function grabPiece(e) {
   const element = e.target;
@@ -57,6 +59,7 @@ function grabPiece(e) {
 function movePiece(e) {
   const element = e.target;
   if (activePiece) {
+    const minX = chessboardRef.current.style.left;
     const x = e.clientX - 50;
     const y = e.clientY - 50;
     activePiece.style.position = "absolute";
@@ -70,7 +73,6 @@ function dropPiece(e) {
     activePiece = null;
   }
 }
-function Chessboard() {
   let board = [];
 
   for (let j = verticalAxis.length -1; j >= 0; j--) {
@@ -93,7 +95,9 @@ function Chessboard() {
     onMouseMove={(e) => movePiece(e)}
     onMouseDown={(e) => grabPiece(e)}
     onMouseUp={(e) => dropPiece(e)}
-    id="chessboard">
+    id="chessboard"
+    ref={chessboardRef}
+  >
     {board}
   </div>
   );
