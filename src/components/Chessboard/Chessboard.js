@@ -37,7 +37,7 @@ for (let i =0; i < 8; i++) {
   });
 }
 function Chessboard() {
-  const chessboardRef = null;
+  const chessboardRef = React.useRef(null);
 
   let activePiece : null;
 
