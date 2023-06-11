@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import Tile from '../Tile/Tile';
 import './Chessboard.css';
@@ -39,7 +40,7 @@ for (let i =0; i < 8; i++) {
 function Chessboard() {
   const chessboardRef = React.useRef(null);
 
-  let activePiece : null;
+  let activePiece = null;
 
 function grabPiece(e) {
   const element = e.target;
@@ -57,14 +58,23 @@ function grabPiece(e) {
 }
 
 function movePiece(e) {
-  const element = e.target;
-  if (activePiece) {
-    const minX = chessboardRef.current.style.left;
+  const chessboard = chessboardRef.current;
+  if (activePiece && chessboard) {
+    const minX = parseInt(chessboard.style.left);
+    const minY = parseInt(chessboard.style.top);
     const x = e.clientX - 50;
     const y = e.clientY - 50;
     activePiece.style.position = "absolute";
-    activePiece.style.left = `${x}px`;
-    activePiece.style.top = `${y}px`;
+    // activePiece.style.left = `${x}px`;
+    // activePiece.style.top = `${y}px`;
+
+    console.log(minX);
+    
+    if (x < minX) {
+      activePiece.style.left = `${minX}px`;
+    } else {
+      activePiece.style.left = `${x}px`;
+    }
   }
 }
 
