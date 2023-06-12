@@ -60,21 +60,18 @@ function grabPiece(e) {
 function movePiece(e) {
   const chessboard = chessboardRef.current;
   if (activePiece && chessboard) {
-    const minX = parseInt(chessboard.style.left);
-    const minY = parseInt(chessboard.style.top);
+    const minX = chessboard.offsetLeft - 25;
+    const minY = chessboard.offsetTop;
     const x = e.clientX - 50;
     const y = e.clientY - 50;
     activePiece.style.position = "absolute";
     // activePiece.style.left = `${x}px`;
     // activePiece.style.top = `${y}px`;
 
-    console.log(minX);
+    console.log(chessboard);
     
-    if (x < minX) {
-      activePiece.style.left = `${minX}px`;
-    } else {
-      activePiece.style.left = `${x}px`;
-    }
+    activePiece.style.left = x < minX ? activePiece.style.left = `${minX}px` : activePiece.style.left = `${x}px`;
+    activePiece.style.top = x < minY ? activePiece.style.top = `${minY}px` : activePiece.style.top = `${y}px`;
   }
 }
 
