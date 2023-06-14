@@ -83,17 +83,16 @@ function movePiece(e) {
 
     //if y is smaller than minimum amount
     if (y < minY) {
-      activePiece.style.top = `{minY}px`;
+      activePiece.style.top = `${minY}px`;
     }
     //if y is bigger than maximum amount
     else if (y > maxY) {
       activePiece.style.top = `${maxY}px`;
     }
-
-    console.log(chessboard);
-    
-    activePiece.style.left = x < minX ? activePiece.style.left = `${minX}px` : activePiece.style.left = `${x}px`;
-    activePiece.style.top = x < minY ? activePiece.style.top = `${minY}px` : activePiece.style.top = `${y}px`;
+    //if y is in the constraints
+    else {
+      activePiece.style.top = `${y}px`;
+    }
   }
 }
 
