@@ -62,7 +62,7 @@ function movePiece(e) {
   if (activePiece && chessboard) {
     const minX = chessboard.offsetLeft - 25;
     const minY = chessboard.offsetTop - 25;
-    const maxX = chessboard.offsetleft + chessboard.clientWidth - 75;
+    const maxX = chessboard.offsetLeft + chessboard.clientWidth - 75;
     const maxY = chessboard.offsetTop + chessboard.clientHeight - 75;
     const x = e.clientX - 50;
     const y = e.clientY - 50;
