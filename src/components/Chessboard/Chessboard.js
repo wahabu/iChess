@@ -97,6 +97,7 @@ function movePiece(e) {
 }
 
 function dropPiece(e) {
+  console.log(e);
   if(activePiece) {
     activePiece = null;
   }
